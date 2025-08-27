@@ -90,6 +90,7 @@ export default function TabServices() {
             {tabContents.map((tab, index) => (
               <button
                 key={tab.id}
+                onMouseEnter={() => setActiveTab(index)}
                 onClick={() => setActiveTab(index)}
                 className={`
                   px-6 py-3 text-lg font-medium transition-all duration-200
