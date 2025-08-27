@@ -3,7 +3,11 @@ import { useRef, useEffect, useState } from 'react';
 
 const Stats = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { 
+    once: true, 
+    margin: '-100px 0px',
+    threshold: 0.3
+  });
 
   const stats = [
     { value: 60000, suffix: '+', label: 'Verified Users' },
@@ -21,17 +25,42 @@ const Stats = () => {
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 40, scale: 0.8 }}
+              animate={isInView ? { 
+                opacity: 1, 
+                y: 0, 
+                scale: 1 
+              } : {}}
+              transition={{ 
+                duration: 0.8,
+                ease: [0.25, 0.46, 0.45, 0.94] // Custom easing
+              }}
               className="text-center"
             >
-              <div className="text-4xl md:text-5xl font-medium text-accent-600">
+              <motion.div 
+                className="text-4xl md:text-5xl font-medium text-accent-600"
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: 0.3
+                }}
+              >
                 {stat.prefix}
                 {isInView && <Counter end={stat.value} />}
                 {stat.suffix}
-              </div>
-              <p className="mt-3 text-gray-600 text-base">{stat.label}</p>
+              </motion.div>
+              <motion.p 
+                className="mt-3 text-gray-600 text-base"
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: 0.5
+                }}
+              >
+                {stat.label}
+              </motion.p>
             </motion.div>
           ))}
         </div>
@@ -45,7 +74,7 @@ const Counter = ({ end }: { end: number }) => {
 
   useEffect(() => {
     let startTime: number;
-    const duration = 2000; // 2 seconds
+    const duration = 1000; // 1 second - doubled from 0.5s
 
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;

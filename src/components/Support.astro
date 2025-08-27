@@ -25,20 +25,9 @@ import VideoPlayer from "./VideoPlayer.astro";
         <VideoPlayer 
           src="/security-lock.webm" 
           alt="HoneyBadger security and support animated video" 
-          class="w-full max-w-md animate-float-slow"
+          class="w-full max-w-md"
         />
       </div>
     </div>
   </div>
 </section>
-
-<style>
-  @keyframes float-slow {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-  }
-
-  .animate-float-slow {
-    animation: float-slow 3s ease-in-out infinite;
-  }
-</style>

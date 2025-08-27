@@ -208,8 +208,33 @@
 /* Bondia Condensed Font Family */
 @font-face {
   font-family: "Bondia";
-  src: url("/fonts/Bondia-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("/fonts/Bondia-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SF Pro Display Font Family */
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -272,7 +297,7 @@
   }
 
   h1 {
-    @apply font-heading font-normal;
+    @apply font-heading font-medium;
   }
 
   h2,
@@ -280,7 +305,7 @@
   h4,
   h5,
   h6 {
-    @apply font-heading font-normal;
+    @apply font-heading font-medium;
   }
 }
 

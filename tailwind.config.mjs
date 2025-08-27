@@ -179,7 +179,7 @@ export default {
         }
       },
       fontFamily: {
-        heading: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['SF Pro Display', 'Inter', 'system-ui', 'sans-serif'],
         gulams: ['Gulams Condensed', 'sans-serif'],
         rubik: ['Rubik', 'sans-serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
