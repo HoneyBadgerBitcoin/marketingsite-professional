@@ -160,25 +160,6 @@ export default function TabServices() {
           </div>
         </div>
 
-        {/* Additional CTAs or stats */}
-        <div className="mt-20 text-center">
-          <div className="inline-flex items-center gap-8 bg-white rounded-2xl shadow-lg p-8">
-            <div>
-              <p className="text-3xl font-bold text-primary-600">60,000+</p>
-              <p className="text-gray-600">Active Users</p>
-            </div>
-            <div className="w-px h-12 bg-gray-300"></div>
-            <div>
-              <p className="text-3xl font-bold text-primary-600">200+</p>
-              <p className="text-gray-600">ATM Locations</p>
-            </div>
-            <div className="w-px h-12 bg-gray-300"></div>
-            <div>
-              <p className="text-3xl font-bold text-primary-600">24/7</p>
-              <p className="text-gray-600">Support</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
