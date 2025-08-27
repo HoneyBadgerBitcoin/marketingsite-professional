@@ -4,7 +4,7 @@ import Header from '../components/Header.tsx';
 import Hero from '../components/Hero.astro';
 import ATMShowcase from '../components/ATMShowcase.astro';
 import Testimonials from '../components/Testimonials.astro';
-import Cryptocurrencies from '../components/Cryptocurrencies.astro';
+import TabServices from '../components/TabServices.tsx';
 import Stats from '../components/Stats.tsx';
 import Support from '../components/Support.astro';
 import Insights from '../components/Insights.astro';
@@ -24,7 +24,7 @@ import Footer from '../components/Footer.astro';
         <div class="relative z-10">
           <Stats client:load />
           <!-- <Features /> -->
-          <Cryptocurrencies />
+          <TabServices client:load />
           <ATMShowcase />
         </div>
       </div>
