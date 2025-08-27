@@ -143,7 +143,7 @@ export default function TabServices() {
                     {content.highlights && (
                       <div className="flex flex-wrap gap-3 mt-2 mb-2">
                         {content.highlights.map((h, i) => (
-                          <span key={`${content.id}-highlight-${i}`} className="px-3 py-1 rounded-full bg-accent-50 text-accent-700 text-sm font-medium">
+                          <span key={`${content.id}-highlight-${i}`} className="px-3 py-1 bg-accent-50 text-accent-700 text-sm font-medium">
                             {h}
                           </span>
                         ))}
@@ -153,7 +153,7 @@ export default function TabServices() {
                     <div className="space-y-5 md:space-y-6 mt-8 mb-10">
                       {content.features.map((feature, featureIndex) => (
                         <div key={`${content.id}-${featureIndex}`} className="flex items-start gap-4">
-                        <div className="w-6 h-6 rounded-full bg-accent-600 flex items-center justify-center flex-shrink-0 mt-1">
+                        <div className="w-6 h-6 bg-accent-600 flex items-center justify-center flex-shrink-0 mt-1">
                             <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                             </svg>
@@ -177,7 +177,7 @@ export default function TabServices() {
 
                 {/* Media Content */}
                 <div className="relative self-start">
-                  <div className="h-[520px] md:h-[560px] rounded-2xl overflow-hidden shadow-xl">
+                  <div className="h-[520px] md:h-[560px] overflow-hidden shadow-xl">
                     {content.media.type === 'video' ? (
                       <video
                         src={content.media.src}

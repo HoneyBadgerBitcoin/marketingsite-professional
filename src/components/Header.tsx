@@ -82,7 +82,7 @@ const buyItems = [
           <div className="hidden md:flex items-center space-x-8">
             {/* Buy Dropdown Button */}
             <button 
-              className="flex items-center space-x-1 px-3 py-2 text-white transition-colors duration-200 rounded-lg hover:bg-white/5 text-lg font-semibold"
+              className="flex items-center space-x-1 px-3 py-2 text-white transition-colors duration-200 hover:bg-white/5 text-lg font-semibold"
               onMouseEnter={() => setOpenDropdown('buy')}
             >
               <span>Buy</span>
@@ -91,7 +91,7 @@ const buyItems = [
             
             {/* Sell Dropdown Button */}
             <button 
-              className="flex items-center space-x-1 px-3 py-2 text-white transition-colors duration-200 rounded-lg hover:bg-white/5 text-lg font-semibold"
+              className="flex items-center space-x-1 px-3 py-2 text-white transition-colors duration-200 hover:bg-white/5 text-lg font-semibold"
               onMouseEnter={() => setOpenDropdown('sell')}
             >
               <span>Sell</span>
@@ -100,7 +100,7 @@ const buyItems = [
             
             {/* ATMs Dropdown Button */}
             <button 
-              className="flex items-center space-x-1 px-3 py-2 text-white transition-colors duration-200 rounded-lg hover:bg-white/5 text-lg font-semibold"
+              className="flex items-center space-x-1 px-3 py-2 text-white transition-colors duration-200 hover:bg-white/5 text-lg font-semibold"
               onMouseEnter={() => setOpenDropdown('atm')}
             >
               <span>ATMs</span>
@@ -109,7 +109,7 @@ const buyItems = [
             
             {/* Support Dropdown Button */}
             <button 
-              className="flex items-center space-x-1 px-3 py-2 text-white transition-colors duration-200 rounded-lg hover:bg-white/5 text-lg font-semibold"
+              className="flex items-center space-x-1 px-3 py-2 text-white transition-colors duration-200 hover:bg-white/5 text-lg font-semibold"
               onMouseEnter={() => setOpenDropdown('support')}
             >
               <span>Support</span>
@@ -118,7 +118,7 @@ const buyItems = [
             
             {/* Learn Dropdown Button */}
             <button 
-              className="flex items-center space-x-1 px-3 py-2 text-white transition-colors duration-200 rounded-lg hover:bg-white/5 text-lg font-semibold"
+              className="flex items-center space-x-1 px-3 py-2 text-white transition-colors duration-200 hover:bg-white/5 text-lg font-semibold"
               onMouseEnter={() => setOpenDropdown('learn')}
             >
               <span>Learn</span>
@@ -130,7 +130,7 @@ const buyItems = [
           <div className="hidden md:flex items-center space-x-4">
             {/* Language Switch Button */}
             <button 
-              className="flex items-center space-x-2 px-3 py-2 text-white transition-colors duration-200 rounded-lg hover:bg-white/5 text-base font-medium"
+              className="flex items-center space-x-2 px-3 py-2 text-white transition-colors duration-200 hover:bg-white/5 text-base font-medium"
               onMouseEnter={() => setOpenDropdown('lang')}
             >
               <Globe className="h-5 w-5" />
@@ -138,10 +138,10 @@ const buyItems = [
               <ChevronDown className="h-4 w-4" />
             </button>
             
-            <button className="px-4 py-2 text-white transition-colors duration-200 rounded-lg hover:bg-white/5 text-base font-medium">
-              Sign In
+            <button className="px-4 py-2 text-white transition-colors duration-200 hover:bg-white/5 text-base font-medium">
+              Log in
             </button>
-            <a href="#contact" className="btn-pill text-sm">Contact Sales</a>
+            <a href="#contact" className="btn-pill text-base">Sign up</a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -246,7 +246,7 @@ const buyItems = [
                     setCurrentLanguage(language.code);
                     setIsMenuOpen(false);
                   }}
-                  className={`w-full flex items-center justify-between px-2 py-3 text-left rounded-lg transition-colors ${
+                  className={`w-full flex items-center justify-between px-2 py-3 text-left transition-colors ${
                     currentLanguage === language.code
                       ? "bg-primary-50 text-primary-600"
                       : "text-gray-700 hover:bg-gray-50"
@@ -267,9 +267,9 @@ const buyItems = [
 
             <div className="flex flex-col space-y-2 mt-4">
               <button className="px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors">
-                Sign In
+                Log in
               </button>
-              <a href="/find-atm" className="px-6 py-2 bg-accent-600 text-white rounded-full hover:bg-accent-700 hover:shadow-lg transition-all duration-300 font-medium" onClick={() => setIsMenuOpen(false)}>
+              <a href="/find-atm" className="px-6 py-2 bg-accent-600 text-white hover:bg-accent-700 hover:shadow-lg transition-all duration-300 font-medium" onClick={() => setIsMenuOpen(false)}>
                 Find ATM
               </a>
             </div>
@@ -302,7 +302,7 @@ const buyItems = [
                       key={item.label}
                       href={item.href}
                       onClick={() => setOpenDropdown(null)}
-                      className="group flex items-start gap-3 px-3 py-2 rounded-md hover:bg-white/5 transition-colors"
+                      className="group flex items-start gap-3 px-3 py-2 hover:bg-white/5 transition-colors"
                     >
                       <div className="mt-0.5 text-accent-400">
                         <item.icon className="h-5 w-5" />
@@ -334,7 +334,7 @@ const buyItems = [
                       key={item.label}
                       href={item.href}
                       onClick={() => setOpenDropdown(null)}
-                      className="group flex items-start gap-3 px-3 py-2 rounded-md hover:bg-white/5 transition-colors"
+                      className="group flex items-start gap-3 px-3 py-2 hover:bg-white/5 transition-colors"
                     >
                       <div className="mt-0.5 text-accent-400">
                         <item.icon className="h-5 w-5" />
@@ -366,7 +366,7 @@ const buyItems = [
                       key={item.label}
                       href={item.href}
                       onClick={() => setOpenDropdown(null)}
-                      className="group flex items-start gap-3 px-3 py-2 rounded-md hover:bg-white/5 transition-colors"
+                      className="group flex items-start gap-3 px-3 py-2 hover:bg-white/5 transition-colors"
                     >
                       <div className="mt-0.5 text-accent-400">
                         <item.icon className="h-5 w-5" />
@@ -398,7 +398,7 @@ const buyItems = [
                       key={item.label}
                       href={item.href}
                       onClick={() => setOpenDropdown(null)}
-                      className="group flex items-start gap-3 px-3 py-2 rounded-md hover:bg-white/5 transition-colors"
+                      className="group flex items-start gap-3 px-3 py-2 hover:bg-white/5 transition-colors"
                     >
                       <div className="mt-0.5 text-accent-400">
                         <item.icon className="h-5 w-5" />
@@ -430,7 +430,7 @@ const buyItems = [
                       key={item.label}
                       href={item.href}
                       onClick={() => setOpenDropdown(null)}
-                      className="group flex items-start gap-3 px-3 py-2 rounded-md hover:bg-white/5 transition-colors"
+                      className="group flex items-start gap-3 px-3 py-2 hover:bg-white/5 transition-colors"
                     >
                       <div className="mt-0.5 text-accent-400">
                         <item.icon className="h-5 w-5" />
@@ -464,7 +464,7 @@ const buyItems = [
                         setCurrentLanguage(language.code);
                         setOpenDropdown(null);
                       }}
-                      className={`flex items-center gap-3 px-3 py-2 rounded-md transition-colors ${
+                      className={`flex items-center gap-3 px-3 py-2 transition-colors ${
                         currentLanguage === language.code
                           ? "bg-white/10 text-white"
                           : "hover:bg-white/5 text-gray-300"

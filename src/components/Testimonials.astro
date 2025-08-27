@@ -84,7 +84,7 @@ const getSourceIcon = (source) => {
     <!-- Testimonials Grid -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
       {testimonials.map((testimonial) => (
-        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100">
+        <div class="bg-white p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100">
           <!-- Review Text -->
           <p class="text-gray-700 text-sm leading-relaxed mb-6 line-clamp-4">
             {testimonial.text}
@@ -96,7 +96,7 @@ const getSourceIcon = (source) => {
               <img 
                 src={testimonial.avatar}
                 alt={testimonial.author}
-                class="w-10 h-10 rounded-full"
+                class="w-10 h-10"
               />
               <div>
                 <p class="font-semibold text-gray-900 text-sm">{testimonial.author}</p>

@@ -315,33 +315,33 @@
   }
 
   .btn-primary {
-    @apply px-6 py-3 bg-accent-600 text-white rounded-lg hover:bg-accent-700 transition-colors duration-200 font-semibold shadow-sm;
+    @apply px-6 py-3 bg-accent-600 text-white hover:bg-accent-700 transition-colors duration-200 font-semibold shadow-sm;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-dark-accent-600 text-white rounded-lg hover:bg-dark-accent-700 transition-colors duration-200 font-semibold shadow-sm;
+    @apply px-6 py-3 bg-dark-accent-600 text-white hover:bg-dark-accent-700 transition-colors duration-200 font-semibold shadow-sm;
   }
 
   .btn-outline {
-    @apply px-6 py-3 border border-gray-300 text-gray-800 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-colors duration-200 font-medium;
+    @apply px-6 py-3 border border-gray-300 text-gray-800 hover:border-gray-400 hover:bg-gray-50 transition-colors duration-200 font-medium;
   }
 
   .glass-effect {
     @apply backdrop-blur-lg bg-white/10 border border-white/20;
   }
 
-  /* Ripple-like pill CTA */
+  /* Sharp pill CTA */
   .btn-pill {
-    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-600 text-white hover:bg-accent-700 transition-colors duration-200 font-medium shadow-sm;
+    @apply inline-flex items-center gap-2 px-5 py-2.5 bg-accent-600 text-white hover:bg-accent-700 transition-colors duration-200 font-medium shadow-sm;
   }
 
-  /* Modern corporate buttons */
+  /* Sharp corporate buttons */
   .btn-pill-primary {
-    @apply inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-all duration-200 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+    @apply inline-flex items-center gap-2 px-8 py-4 bg-accent-600 text-white hover:bg-accent-700 transition-all duration-200 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
   }
 
   .btn-pill-outline {
-    @apply inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 font-medium;
+    @apply inline-flex items-center gap-2 px-8 py-4 border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 font-medium;
   }
 
   .card-hover {
@@ -366,19 +366,19 @@
       #ffffff;
   }
 
-  /* Modern Cards */
+  /* Sharp Corporate Cards */
   .card-modern {
-    @apply bg-white rounded-3xl shadow-card p-8 transition-all duration-300
+    @apply bg-white shadow-card p-8 transition-all duration-300
            hover:shadow-card-hover hover:-translate-y-2;
   }
   
   .card-gradient {
-    @apply rounded-3xl p-8 text-white shadow-xl transition-all duration-300
+    @apply p-8 text-white shadow-xl transition-all duration-300
            hover:shadow-2xl hover:-translate-y-2;
   }
   
   .card-colored {
-    @apply rounded-3xl p-8 shadow-lg transition-all duration-300
+    @apply p-8 shadow-lg transition-all duration-300
            hover:shadow-xl hover:-translate-y-2;
   }
 
@@ -418,14 +418,14 @@
 
   /* Input Fields */
   .input-modern {
-    @apply w-full px-6 py-4 bg-gray-50 border border-gray-200 rounded-2xl
+    @apply w-full px-6 py-4 bg-gray-50 border border-gray-200
            focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent
            transition-all duration-300;
   }
 
   /* Glass effect for dark sections */
   .glass-dark {
-    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl;
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
   }
   
   /* Professional section backgrounds */
