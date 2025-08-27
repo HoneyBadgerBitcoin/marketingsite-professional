@@ -107,7 +107,7 @@ export default function TabServices() {
                 onMouseEnter={() => setActiveTab(index)}
                 onClick={() => setActiveTab(index)}
                 className={`
-                  px-8 py-4 text-lg font-medium transition-colors duration-150 whitespace-nowrap
+                  px-8 py-4 text-xl font-medium transition-colors duration-150 whitespace-nowrap
                   ${activeTab === index
                     ? 'text-accent-600 border-b-2 border-accent-600 -mb-[2px]'
                     : 'text-gray-600 hover:text-gray-900'
