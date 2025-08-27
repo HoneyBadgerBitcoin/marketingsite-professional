@@ -335,13 +335,13 @@
     @apply inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-600 text-white hover:bg-accent-700 transition-colors duration-200 font-medium shadow-sm;
   }
 
-  /* Modern pill buttons */
+  /* Modern corporate buttons */
   .btn-pill-primary {
-    @apply inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent-600 text-white hover:bg-accent-700 transition-all duration-200 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+    @apply inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-all duration-200 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
   }
 
   .btn-pill-outline {
-    @apply inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 font-medium;
+    @apply inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 font-medium;
   }
 
   .card-hover {
@@ -353,16 +353,16 @@
   .shadow-card-hover { box-shadow: 0 16px 40px rgba(16, 24, 40, 0.12); }
 
   /* Gradients */
-  .bg-gradient-primary { background-image: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%); }
-  .bg-gradient-secondary { background-image: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 100%); }
-  .bg-gradient-accent { background-image: linear-gradient(135deg, #0ea5e9 0%, #075985 100%); }
+  .bg-gradient-primary { background-image: linear-gradient(135deg, #024eb3 0%, #023f95 100%); }
+  .bg-gradient-secondary { background-image: linear-gradient(135deg, #6ba6ff 0%, #3d7fff 100%); }
+  .bg-gradient-accent { background-image: linear-gradient(135deg, #024eb3 0%, #023377 100%); }
   .bg-gradient-dark { background-image: linear-gradient(180deg, rgba(10,10,10,0) 0%, rgba(10,10,10,0.2) 100%); }
 
-  /* Ripple-like hero background */
+  /* Professional hero background */
   .bg-ripple-hero {
     background:
-      radial-gradient(1200px 600px at 80% -10%, rgba(14,165,233,0.15) 0%, transparent 60%),
-      radial-gradient(1000px 500px at -20% 40%, rgba(3,105,161,0.12) 0%, transparent 60%),
+      radial-gradient(1200px 600px at 80% -10%, rgba(2,78,179,0.04) 0%, transparent 60%),
+      radial-gradient(1000px 500px at -20% 40%, rgba(15,23,42,0.02) 0%, transparent 60%),
       #ffffff;
   }
 
@@ -392,7 +392,11 @@
   }
   
   .text-gradient-accent {
-    @apply bg-gradient-accent bg-clip-text text-transparent;
+    background: linear-gradient(135deg, #024eb3 0%, #3d7fff 40%, #024eb3 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
   }
 
   /* Badge/Pills */
@@ -424,25 +428,33 @@
     @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl;
   }
   
-  /* Clean pastel section backgrounds */
+  /* Professional section backgrounds */
   .section-sand {
-    @apply bg-gradient-to-b from-pastel-sand-50 to-white;
+    @apply bg-white;
   }
   
   .section-mint {
-    @apply bg-gradient-to-b from-pastel-mint-50 to-pastel-mint-25;
+    @apply bg-gray-50;
   }
   
   .section-blue {
-    @apply bg-gradient-to-b from-pastel-blue-50 to-white;
+    @apply bg-slate-50;
   }
   
   .section-purple {
-    @apply bg-gradient-to-b from-pastel-purple-50 to-white;
+    @apply bg-white;
   }
   
   .section-neutral {
-    @apply bg-gradient-to-b from-gray-50/50 to-white;
+    @apply bg-gray-50;
+  }
+  
+  .section-dark {
+    @apply bg-slate-900 text-white;
+  }
+  
+  .section-corporate {
+    @apply bg-gradient-to-b from-slate-50 to-white;
   }
   
   /* Modern section spacing */

@@ -18,8 +18,8 @@ import Footer from '../components/Footer.astro';
     <Header client:load />
     <main>
     <Hero />
-      <!-- Stats Section - Soft sand/beige pastel -->
-      <section class="section-sand section-padding-sm">
+      <!-- Stats Section - Professional grey background -->
+      <section class="section-blue section-padding-sm">
         <Stats client:load />
       </section>
       
@@ -28,28 +28,33 @@ import Footer from '../components/Footer.astro';
         <TabServices client:load />
       </section>
       
-      <!-- Support Section - Soft blue pastel -->
+      <!-- Support Section - Professional slate background -->
       <section class="section-blue section-padding">
         <Support />
       </section>
       
-      <!-- Testimonials Section - Light purple pastel -->
-      <section class="section-purple section-padding">
+      <!-- Testimonials Section - Custom warm background -->
+      <section class="section-padding" style="background-color: #f1f1e6;">
         <Testimonials />
       </section>
       
-      <!-- Insights & Newsletter - Light mint pastel -->
+      <!-- Insights - Professional gray background -->
       <section class="section-mint section-padding">
         <Insights />
-        <NewsletterCTA />
       </section>
       
-      <!-- FAQ & CTA - Clean neutral -->
+      <!-- FAQ - Professional gray background -->
       <section class="section-neutral section-padding">
         <FAQ client:load />
-        <CTA />
       </section>
     </main>
+    
+    <!-- Full-width Newsletter CTA Section -->
+    <NewsletterCTA />
+    
+    <!-- Full-width Final CTA Section -->
+    <CTA />
+    
     <Footer />
   </div>
 </BaseLayout>

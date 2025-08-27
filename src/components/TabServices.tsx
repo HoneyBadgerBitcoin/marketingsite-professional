@@ -87,7 +87,7 @@ export default function TabServices() {
   }, []);
 
   return (
-    <section className="py-28 md:py-36 bg-gradient-to-b from-blue-50 to-white">
+    <section className="py-28 md:py-36 bg-white">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
