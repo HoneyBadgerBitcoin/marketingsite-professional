@@ -108,54 +108,62 @@ export default function TabServices() {
 
         {/* Tab Content */}
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <div className={`${activeTab % 2 === 1 ? 'lg:order-2' : ''}`}>
-              <h3 className="text-3xl text-gray-900 mb-6">
-                {currentContent.heading}
-              </h3>
-              <p className="text-lg text-gray-600 mb-8">
-                {currentContent.description}
-              </p>
-              
-              <div className="space-y-4 mb-8">
-                {currentContent.features.map((feature, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-primary-500 flex items-center justify-center flex-shrink-0 mt-1">
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <p className="text-gray-700">{feature}</p>
+          <div className="relative min-h-[500px]">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Text Content */}
+              <div className={`transition-all duration-300 ease-in-out ${activeTab % 2 === 1 ? 'lg:order-2' : ''}`}>
+                <div className="min-h-[400px] flex flex-col justify-center">
+                  <h3 className="text-3xl text-gray-900 mb-6 transition-opacity duration-300">
+                    {currentContent.heading}
+                  </h3>
+                  <p className="text-lg text-gray-600 mb-8 transition-opacity duration-300">
+                    {currentContent.description}
+                  </p>
+                  
+                  <div className="space-y-4 mb-8 transition-opacity duration-300">
+                    {currentContent.features.map((feature, index) => (
+                      <div key={index} className="flex items-start gap-3">
+                        <div className="w-6 h-6 rounded-full bg-primary-500 flex items-center justify-center flex-shrink-0 mt-1">
+                          <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        <p className="text-gray-700">{feature}</p>
+                      </div>
+                    ))}
                   </div>
-                ))}
+
+                  <button className="btn-primary transition-opacity duration-300">
+                    {currentContent.ctaText} →
+                  </button>
+                </div>
               </div>
 
-              <button className="btn-primary">
-                {currentContent.ctaText} →
-              </button>
-            </div>
-
-            {/* Media Content */}
-            <div className={`relative ${activeTab % 2 === 1 ? 'lg:order-1' : ''}`}>
-              {currentContent.media.type === 'video' ? (
-                <video
-                  src={currentContent.media.src}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-auto rounded-2xl shadow-xl"
-                >
-                  Your browser does not support the video tag.
-                </video>
-              ) : (
-                <img
-                  src={currentContent.media.src}
-                  alt={currentContent.media.alt}
-                  className="w-full h-auto rounded-2xl shadow-xl"
-                />
-              )}
+              {/* Media Content */}
+              <div className={`relative transition-all duration-300 ease-in-out ${activeTab % 2 === 1 ? 'lg:order-1' : ''}`}>
+                <div className="min-h-[400px] flex items-center justify-center">
+                  {currentContent.media.type === 'video' ? (
+                    <video
+                      key={currentContent.id} // Force re-render for smooth transitions
+                      src={currentContent.media.src}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-auto rounded-2xl shadow-xl transition-opacity duration-300"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <img
+                      key={currentContent.id} // Force re-render for smooth transitions
+                      src={currentContent.media.src}
+                      alt={currentContent.media.alt}
+                      className="w-full h-auto rounded-2xl shadow-xl transition-opacity duration-300"
+                    />
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </div>
