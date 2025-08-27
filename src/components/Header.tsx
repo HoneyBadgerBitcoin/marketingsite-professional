@@ -46,7 +46,7 @@ const buyItems = [
   ];
 
   const atmItems = [
-    { label: "Find an ATM", href: "#find-atm", icon: MapPin },
+    { label: "Find an ATM", href: "/find-atm", icon: MapPin },
     { label: "Host an ATM", href: "#host-atm", icon: Building2 },
   ];
 
@@ -269,9 +269,9 @@ const buyItems = [
               <button className="px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors">
                 Sign In
               </button>
-              <button className="px-6 py-2 bg-dark-accent-400 text-white rounded-full hover:bg-dark-accent-500 hover:shadow-lg transition-all duration-300 font-medium">
+              <a href="/find-atm" className="px-6 py-2 bg-dark-accent-400 text-white rounded-full hover:bg-dark-accent-500 hover:shadow-lg transition-all duration-300 font-medium" onClick={() => setIsMenuOpen(false)}>
                 Find ATM
-              </button>
+              </a>
             </div>
           </div>
         </motion.div>
