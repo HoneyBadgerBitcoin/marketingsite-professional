@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface TabContent {
   id: string;
@@ -72,6 +72,16 @@ export default function TabServices() {
   const [activeTab, setActiveTab] = useState(0);
   const currentContent = tabContents[activeTab];
 
+  // Preload images to prevent jumping
+  useEffect(() => {
+    tabContents.forEach(tab => {
+      if (tab.media.type === 'image') {
+        const img = new Image();
+        img.src = tab.media.src;
+      }
+    });
+  }, []);
+
   return (
     <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
       <div className="container-custom">
@@ -111,18 +121,18 @@ export default function TabServices() {
           <div className="relative min-h-[500px]">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Text Content */}
-              <div className={`transition-all duration-300 ease-in-out ${activeTab % 2 === 1 ? 'lg:order-2' : ''}`}>
+              <div className="transition-opacity duration-200 ease-in-out">
                 <div className="min-h-[400px] flex flex-col justify-center">
-                  <h3 className="text-3xl text-gray-900 mb-6 transition-opacity duration-300">
+                  <h3 className="text-3xl text-gray-900 mb-6">
                     {currentContent.heading}
                   </h3>
-                  <p className="text-lg text-gray-600 mb-8 transition-opacity duration-300">
+                  <p className="text-lg text-gray-600 mb-8">
                     {currentContent.description}
                   </p>
                   
-                  <div className="space-y-4 mb-8 transition-opacity duration-300">
+                  <div className="space-y-4 mb-8">
                     {currentContent.features.map((feature, index) => (
-                      <div key={index} className="flex items-start gap-3">
+                      <div key={`${currentContent.id}-${index}`} className="flex items-start gap-3">
                         <div className="w-6 h-6 rounded-full bg-primary-500 flex items-center justify-center flex-shrink-0 mt-1">
                           <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -133,33 +143,34 @@ export default function TabServices() {
                     ))}
                   </div>
 
-                  <button className="btn-primary transition-opacity duration-300">
+                  <button className="btn-primary">
                     {currentContent.ctaText} →
                   </button>
                 </div>
               </div>
 
               {/* Media Content */}
-              <div className={`relative transition-all duration-300 ease-in-out ${activeTab % 2 === 1 ? 'lg:order-1' : ''}`}>
+              <div className="relative transition-opacity duration-200 ease-in-out">
                 <div className="min-h-[400px] flex items-center justify-center">
                   {currentContent.media.type === 'video' ? (
                     <video
-                      key={currentContent.id} // Force re-render for smooth transitions
+                      key={currentContent.id}
                       src={currentContent.media.src}
                       autoPlay
                       loop
                       muted
                       playsInline
-                      className="w-full h-auto rounded-2xl shadow-xl transition-opacity duration-300"
+                      className="w-full h-auto rounded-2xl shadow-xl"
                     >
                       Your browser does not support the video tag.
                     </video>
                   ) : (
                     <img
-                      key={currentContent.id} // Force re-render for smooth transitions
+                      key={currentContent.id}
                       src={currentContent.media.src}
                       alt={currentContent.media.alt}
-                      className="w-full h-auto rounded-2xl shadow-xl transition-opacity duration-300"
+                      className="w-full h-auto rounded-2xl shadow-xl object-cover"
+                      loading="eager"
                     />
                   )}
                 </div>
