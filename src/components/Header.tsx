@@ -37,7 +37,7 @@ const Header = () => {
 const buyItems = [
     { label: "Buy Online", href: "#buy-online", icon: ShoppingCart },
     { label: "Buy at ATM", href: "#buy-atm", icon: Banknote },
-    { label: "Guided Purchase", href: "#guided-purchase", icon: UserCheck },
+    { label: "OTC Desk", href: "#guided-purchase", icon: UserCheck },
   ];
 
   const sellItems = [

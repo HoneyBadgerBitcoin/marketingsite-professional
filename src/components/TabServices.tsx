@@ -54,7 +54,7 @@ const tabContents: TabContent[] = [
   },
   {
     id: 'guided-purchase',
-    title: 'Guided Purchase',
+    title: 'OTC Desk',
     heading: 'Personalized Crypto Assistance',
     description: 'New to crypto? Our expert team provides personalized guidance through your first purchase and beyond.',
     features: [
