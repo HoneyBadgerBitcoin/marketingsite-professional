@@ -68,7 +68,7 @@ const buyItems = [
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`fixed top-0 w-full bg-[#141a1f] text-gray-200 z-50 ${openDropdown ? '' : 'border-b border-gray-800/50'}`}
+        className="fixed top-0 w-full bg-[#141a1f] text-gray-200 z-50 border-b border-gray-800/50"
         onMouseLeave={() => setOpenDropdown(null)}
       >
       <div className="container-custom">
@@ -279,10 +279,11 @@ const buyItems = [
       {/* Mega Dropdown Panels - Inside header for seamless effect */}
       {openDropdown && (
         <motion.div
-          initial={{ opacity: 0, y: -6 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -6 }}
-          className="absolute left-0 right-0 top-full bg-[#141a1f] text-gray-200 shadow-xl"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: -1 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.15, ease: "easeOut" }}
+          className="absolute left-0 right-0 top-full bg-[#141a1f] text-gray-200 shadow-xl border-t border-[#141a1f]"
         >
           <div className="container-custom py-8">
             {/* ATMs Mega Content */}
