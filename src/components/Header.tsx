@@ -120,12 +120,12 @@ const buyItems = [
               <ChevronDown className="h-4 w-4" />
             </button>
             
-            {/* Resources Dropdown Button */}
+            {/* Company Dropdown Button */}
             <button 
               className="flex items-center space-x-1 px-3 py-2 text-white transition-colors duration-200 hover:bg-white/5 text-lg font-semibold"
               onMouseEnter={() => setOpenDropdown('resources')}
             >
-              <span>Resources</span>
+              <span>Company</span>
               <ChevronDown className="h-4 w-4" />
             </button>
           </div>
@@ -232,7 +232,7 @@ const buyItems = [
             </div>
             
             <div className="py-2 border-t border-white/20 mt-4">
-              <div className="text-sm font-medium text-white/70 mb-2">Resources</div>
+              <div className="text-sm font-medium text-white/70 mb-2">Company</div>
               {resourcesItems.map((item) => (
                 <a
                   key={item.label}
@@ -429,12 +429,12 @@ const buyItems = [
               </div>
             )}
 
-            {/* Resources Mega Content */}
+            {/* Company Mega Content */}
             {openDropdown === 'resources' && (
               <div>
                 <div className="mb-6">
                   <h3 className="text-sm font-semibold text-white/80 uppercase tracking-wider mb-3">
-                    Resources & Support
+                    Company & Support
                   </h3>
                   <p className="text-sm text-white/70">
                     Get assistance, company information, and important resources
