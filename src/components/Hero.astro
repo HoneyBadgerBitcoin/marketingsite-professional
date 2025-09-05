@@ -42,10 +42,10 @@ import VideoPlayer from "./VideoPlayer.astro";
       <div class="relative hidden lg:block hero-image">
         <!-- Coin rain video container with glow effect -->
         <div class="relative w-full h-[750px] flex items-center justify-center">
-          <!-- Subtle glow halo behind video -->
+          <!-- Enhanced glow halo behind video -->
           <div class="absolute inset-0 flex items-center justify-center">
-            <div class="absolute w-[600px] h-[400px] bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 blur-[120px] animate-pulse-slow"></div>
-            <div class="absolute w-[500px] h-[320px] bg-gradient-to-r from-purple-600/8 to-blue-600/8 blur-[100px] animate-pulse-slower"></div>
+            <div class="absolute w-[600px] h-[400px] bg-gradient-to-r from-blue-500/20 via-purple-500/25 to-pink-500/20 blur-[120px] animate-pulse-slow"></div>
+            <div class="absolute w-[500px] h-[320px] bg-gradient-to-r from-purple-600/25 to-blue-600/30 blur-[100px] animate-pulse-slower"></div>
           </div>
           
           <!-- Video element with enhanced glow -->
@@ -54,7 +54,7 @@ import VideoPlayer from "./VideoPlayer.astro";
               src="/cryptocurrency-mining-concept.webm" 
               alt="Cryptocurrency mining concept animated video" 
               class="w-full h-full relative z-10"
-              style="filter: drop-shadow(0 0 30px rgba(147, 51, 234, 0.1)) drop-shadow(0 0 60px rgba(59, 130, 246, 0.08));"
+              style="filter: drop-shadow(0 0 30px rgba(147, 51, 234, 0.3)) drop-shadow(0 0 60px rgba(59, 130, 246, 0.25));"
             />
           </div>
         </div>
@@ -147,9 +147,9 @@ import VideoPlayer from "./VideoPlayer.astro";
     position: absolute;
     inset: -40px;
     background: linear-gradient(45deg, 
-      rgba(147, 51, 234, 0.03) 0%, 
-      rgba(59, 130, 246, 0.03) 50%, 
-      rgba(147, 51, 234, 0.03) 100%);
+      rgba(147, 51, 234, 0.15) 0%, 
+      rgba(59, 130, 246, 0.20) 50%, 
+      rgba(147, 51, 234, 0.15) 100%);
     filter: blur(40px);
     border-radius: 0;
     z-index: -1;
