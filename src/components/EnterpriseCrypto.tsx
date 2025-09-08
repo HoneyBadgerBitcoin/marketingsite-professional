@@ -161,26 +161,6 @@ const EnterpriseCrypto = () => {
     setIsPaused(false);
   };
 
-  // Tilt effect for cards
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const element = e.currentTarget;
-    const rect = element.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const rotateX = ((y - centerY) / centerY) * -10;
-    const rotateY = ((x - centerX) / centerX) * 10;
-
-    element.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-  };
-
-  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.currentTarget.style.transform =
-      "perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)";
-    handleContentLeave();
-  };
 
   return (
     <section
@@ -292,19 +272,11 @@ const EnterpriseCrypto = () => {
                         initial={{ opacity: 0 }}
                         animate={isInView ? { opacity: 1 } : {}}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="bg-white/90 hover:bg-white border border-gray-200 backdrop-blur-sm p-8 text-gray-900 transition-all duration-300 min-h-[320px] flex flex-col hover:shadow-[0_20px_40px_rgba(127,161,255,0.15)] cursor-pointer rounded-xl"
-                        onMouseMove={handleMouseMove}
-                        onMouseLeave={handleMouseLeave}
+                        className="bg-white/90 border border-gray-200 backdrop-blur-sm p-8 text-gray-900 min-h-[320px] flex flex-col rounded-xl"
                         onMouseEnter={handleContentHover}
-                        style={{
-                          transformStyle: "preserve-3d",
-                          transition: "transform 0.1s ease-out",
-                        }}
+                        onMouseLeave={handleContentLeave}
                       >
-                        <div
-                          className="flex flex-col gap-4 h-full"
-                          style={{ transform: "translateZ(20px)" }}
-                        >
+                        <div className="flex flex-col gap-4 h-full">
                           <div className="flex items-start justify-between gap-4">
                             <div className="flex items-start gap-4">
                               <div className="p-3 bg-gradient-to-br from-orange-50 to-orange-100 backdrop-blur-sm rounded-lg flex-shrink-0">
@@ -361,19 +333,11 @@ const EnterpriseCrypto = () => {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="bg-white/90 hover:bg-white border border-gray-200 backdrop-blur-sm p-8 transition-all duration-300 min-h-[320px] flex flex-col hover:shadow-[0_20px_40px_rgba(127,161,255,0.15)] cursor-pointer rounded-xl"
-                      onMouseMove={handleMouseMove}
-                      onMouseLeave={handleMouseLeave}
+                      className="bg-white/90 border border-gray-200 backdrop-blur-sm p-8 min-h-[320px] flex flex-col rounded-xl"
                       onMouseEnter={handleContentHover}
-                      style={{
-                        transformStyle: "preserve-3d",
-                        transition: "transform 0.1s ease-out",
-                      }}
+                      onMouseLeave={handleContentLeave}
                     >
-                      <div
-                        className="flex flex-col gap-4 h-full"
-                        style={{ transform: "translateZ(20px)" }}
-                      >
+                      <div className="flex flex-col gap-4 h-full">
                         <div className="flex items-start gap-4">
                           <img
                             src={testimonial.avatar}
